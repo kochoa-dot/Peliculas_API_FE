@@ -52,3 +52,9 @@ export default tseslint.config({
   },
 })
 ```
+<!-- index.html Punto de entrada de nuestra aplicación 
+main.tsx -> ts es de typescript y el x es porque es un componente los componentes son unidades de comportamiento e interfaz de usuario que podemos tener en react asi podemos tener dividida nuestra pagina en muchos pedazos 
+en carpeta assets vamos a colocar los archivos que quiero utilizar dentro de mis componentes de react
+en la carpeta public vamos a colocar los archivos que queremos utilizar en los componentes pero también en toda la aplicación
+El package.json es donde colocamos nuestros comandos por ejemplo el npm run dev y también tenemos nuestras dependencias
+-->
