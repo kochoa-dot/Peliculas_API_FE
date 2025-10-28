@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+import './App.css'//Tambien tenemos la posibilidad de usar estilos
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
     return () => clearInterval(timerId);
   }, [])
 
+  //La parte mas importante de un componente es la parte visual y esa la podemos encontrar con el return como podemos ver es una función llamada App que retorna un componente visual pero además de eso tenemos una parte funcional que tipicamente la colocamos al comienzo es decir antes del return en donde yo coloco las cosas que quiero que haga mi componente. A parte de tener una parte visual tenemos un parte funcional en la cual definimos lo que debe de hacer el componente el comportamiento del componente
   return (
     //Con react yo construyo UI con componentes 
     <div>
