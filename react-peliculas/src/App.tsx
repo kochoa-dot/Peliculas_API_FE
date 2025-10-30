@@ -1,13 +1,20 @@
-import React from "react";
-
 export default function App() {
+
+  const subtitulo = "Esta es una variable";
+
+  const duplicar = (valor: number) => valor*2;
+
+  const imageURL = '/vite.svg';
+
   return(
-    <React.Fragment>
-      {/* Si no quiero tener acá el div puedo utilizar un fragmento es como un placeholder algo que yo puedo colocar solo para satisfacer el echo de que necesito un solo elemento padre por jsx sin que ese elemento padre se traduzca a html*/}
-    <h1>Hola mundo</h1>
-    <h3>Esta es mi pagina</h3>
-    </React.Fragment>
-    // Es simplemente una forma de colocar un elemento padre que me permita transpilar esto sin problema sin embargo no tiene representación en html. También podemos representarlo de esta forma <></>
+    <>
+      <h1>Hola mundo</h1>
+      <h3>{subtitulo.toUpperCase()}</h3> 
+      {/* expresión de JSX */}
+      <h4>El doble de 3 es {duplicar(3)}</h4>
+      <img src={imageURL} alt="logo vite"></img>
+      {/* podemos usar expresiones de jsx para mostrar el valor de una variable al usuario, mostrar el resultado de una función, o para asignarle el valor a un atributo de un elemento html */}
+    </>
   );
 }
 
