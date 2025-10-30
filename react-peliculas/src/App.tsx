@@ -1,11 +1,13 @@
-//Este es un ejemplo de un componente funcional es una función que va a retornar interfaz de usuario
+import React from "react";
+
 export default function App() {
   return(
-    <div>
+    <React.Fragment>
+      {/* Si no quiero tener acá el div puedo utilizar un fragmento es como un placeholder algo que yo puedo colocar solo para satisfacer el echo de que necesito un solo elemento padre por jsx sin que ese elemento padre se traduzca a html*/}
     <h1>Hola mundo</h1>
-    {/* Esto no es html es jsx es una sintaxis parecida pero no es html pero basicamente la idea del jsx es permitirnos construir intefaz de usuario de una manera intuitiva. El jsx tiene como función en el react nos permite utilizar una sintaxis parecida al html sin serlo que nos permite transpilar el codigo de jsx a codigo javascript que es lo que sería ejecutado en el navegador */}
     <h3>Esta es mi pagina</h3>
-    </div>
+    </React.Fragment>
+    // Es simplemente una forma de colocar un elemento padre que me permita transpilar esto sin problema sin embargo no tiene representación en html. También podemos representarlo de esta forma <></>
   );
 }
 
