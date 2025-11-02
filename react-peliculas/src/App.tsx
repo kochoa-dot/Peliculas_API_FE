@@ -8,11 +8,10 @@ export default function App() {
 
   return(
     <>
-    {/* Eventos en react por ejemplo cuando yo de click sobre ese elemento  */}
       <h1 className="rojo" onClick={() => alert('Me has clickeado')}>Hola mundo</h1>
       <button onClick={manejarClick}>Clickeame</button>
       <div>
-        <input onKeyUp={(e) => manejarKeyUp(e)}/> {/*Cuando yo presiono una tecla y la dejo de presionar */}
+        <input onKeyUp={(e) => manejarKeyUp(e)}/>
       </div>
       <div>
         <p>Haz escrito: {texto}</p>
