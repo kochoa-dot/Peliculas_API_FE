@@ -1,30 +1,16 @@
-import Cabecera from "./cabecera";
-import ProyectarContenido from "./ProyectarContenido";
-import ProyectarContenido2 from "./ProyectarContenido2";
+import { useState } from "react";
+import ContenidoDinamico from "./ContenidoDinamico";
 
 export default function App() {
-//Tenemos libertad en como pasar contenido a un componente ya sea utilizando children como el ejemplo 1 o simplemente utilizando atributos normales como en el ejemplo 2
+
+const [mostrar, setMostrar] = useState(false);
+//Dependiendo el estado que yo he colocado en el componente padre estamos utilizando un operador ternario para mostrar contenido dinamicamente en el componente hijo
   return(
     <>
-      <h2>Ejemplo 1</h2>
+      <input type="checkbox" onChange={e => setMostrar(e.target.checked)}/>
+      <label>Mostrar el mensaje oculto</label>
 
-      <ProyectarContenido>
-        <>
-          <button onClick={() => alert("He sido clickeado")}>Clickeame</button>
-          <h4>Este es un h4</h4>
-        </>
-      </ProyectarContenido>
-
-      <h2>Ejemplo 2</h2>
-
-      <ProyectarContenido2 
-        parteSuperior={<button>Boton superior</button>}
-        parteIntermedia={<>
-        <Cabecera/>
-        <p>Lo que yo quiera</p>
-        </>}
-        parteInferior={<> </>}
-      />
+      <ContenidoDinamico mostrarContenido={mostrar} />
     </>
   );
 }
