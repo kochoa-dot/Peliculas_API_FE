@@ -1,16 +1,18 @@
 import { useState } from "react";
-import ContenidoDinamico from "./ContenidoDinamico";
+import ContenidoDinamicoIf from "./ContenidoDinamicoIf";
 
 export default function App() {
 
-const [mostrar, setMostrar] = useState(false);
 //Dependiendo el estado que yo he colocado en el componente padre estamos utilizando un operador ternario para mostrar contenido dinamicamente en el componente hijo
+  const[calificacion, setCalificacion] = useState<number | null>(null);
+
   return(
     <>
-      <input type="checkbox" onChange={e => setMostrar(e.target.checked)}/>
-      <label>Mostrar el mensaje oculto</label>
+      <label>Ingrese la calificación:</label>
+      <input type="number" onChange={e => setCalificacion(Number(e.target.value))}/>
 
-      <ContenidoDinamico mostrarContenido={mostrar} />
+      {calificacion ? <ContenidoDinamicoIf calificacion={calificacion}/> : undefined}
+
     </>
   );
 }
