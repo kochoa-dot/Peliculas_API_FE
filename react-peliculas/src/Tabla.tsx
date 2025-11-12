@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type Persona from "./persona.model";
+import Fila from "./Fila";
 
 export default function Tabla(){
     const personasFuente: Persona[] = [
@@ -29,13 +30,7 @@ export default function Tabla(){
                 </tr>
             </thead>
             <tbody>
-                {personas.map(p => <tr key={p.id}>
-                    <td>{p.nombre}</td>
-                    <td>{p.departamento}</td>
-                    <td>
-                        <button onClick={() => removerPersona(p)}>Remover</button>
-                    </td>
-                </tr>)}
+                {personas.map(p => <Fila key={p.id} persona={p} remover={removerPersona}/>)}
             </tbody>
         </table>
     )
