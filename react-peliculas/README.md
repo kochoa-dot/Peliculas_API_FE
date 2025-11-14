@@ -58,3 +58,4 @@ en carpeta assets vamos a colocar los archivos que quiero utilizar dentro de mis
 en la carpeta public vamos a colocar los archivos que queremos utilizar en los componentes pero también en toda la aplicación
 El package.json es donde colocamos nuestros comandos por ejemplo el npm run dev y también tenemos nuestras dependencias
 -->
+
